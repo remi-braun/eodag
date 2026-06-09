@@ -25,8 +25,8 @@ class StreamResponseContent(Iterable[bytes]):
                     stream.interrupt()
                 StreamResponseContent.__instances = []
 
-            import contextlib
-            with contextlib.suppress(ValueError):
+            import threading
+            if threading.current_thread() == threading.main_thread():
                 signal.signal(signal.SIGINT, signal_handler)
                 signal.signal(signal.SIGTERM, signal_handler)
 
