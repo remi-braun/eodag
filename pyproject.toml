@@ -210,7 +210,7 @@ include = ["eodag*"]
 "*" = ["LICENSE", "NOTICE", "py.typed"]
 
 [tool.setuptools_scm]
-fallback_version = "4.3.2.dev1"
+fallback_version = "4.3.2.rc1"
 
 [tool.isort]
 multi_line_output = 3
